@@ -3,6 +3,12 @@ btnSend.addEventListener("click", () => {
   sendMessage();
 });
 
+userInput.addEventListener("keydown", (e) => {
+  if(e.key == "Enter"){
+    sendMessage()
+  }
+});
+
 async function sendMessage() {
   const userInput = document.getElementById('userInput').value;
   document.getElementById('userInput').value = '';
