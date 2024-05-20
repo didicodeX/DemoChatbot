@@ -4,69 +4,46 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Chatbot McDonald's</title>
-  <style>
-    body {
-      font-family: Arial, sans-serif;
-    }
+  <title>Chatbot Dylane</title>
 
-    #chat {
-      width: 300px;
-      margin: 20px auto;
-      border: 1px solid #ccc;
-      padding: 10px;
-    }
-
-    .message {
-      margin: 10px 0;
-    }
-
-    .user {
-      font-weight: bold;
-    }
-
-    .bot {
-      color: blue;
-    }
-  </style>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
+    integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A=="
+    crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <link rel="stylesheet" href="style.css">
 </head>
 
 <body>
+
   <div id="chat">
-    <div id="messages"></div>
-    <input type="text" id="userInput" placeholder="Entrez votre message">
-    <button class="btn-send">Envoyer</button>
+
+    <div class="fixed-head">
+      <div class="heading">
+        <h2>Messages</h2>
+      </div>
+
+      <div class="user-profile">
+        <img src="./images/atomic-gril.jpg" alt="Robert Fox">
+        <p>Dylane</p>
+      </div>
+    </div>
+
+    <div class="content">
+      <div id="messages"></div>
+    </div>
+
+    <div class="write-message">
+      <div class="write-aria">
+        <img src="./images/smile.png" alt="">
+        <input type="text" id="userInput" placeholder="Ecrire...">
+        <button class="btn-send">
+          <i class="fa-solid fa-paper-plane"></i>
+        </button>
+      </div>
+    </div>
+    
   </div>
 
-  <script>
-
-    const btnSend = document.querySelector(".btn-send");
-    btnSend.addEventListener("click", () => {
-      sendMessage();
-    });
-    
-    async function sendMessage() {
-      const userInput = document.getElementById('userInput').value;
-      document.getElementById('userInput').value = '';
-
-      const messageContainer = document.getElementById('messages');
-      messageContainer.innerHTML += `<div class="message user">Vous: ${userInput}</div>`;
-
-      try {
-        const response = await fetch('http://localhost:3000/chat', {
-          method: 'POST',
-          headers: { 'Content-Type': 'application/json' },
-          body: JSON.stringify({ message: userInput })
-        });
-
-        const data = await response.json();
-        messageContainer.innerHTML += `<div class="message bot">Chatbot: ${data.response}</div>`;
-      } catch (error) {
-        console.error('Erreur:', error);
-        messageContainer.innerHTML += `<div class="message bot">Erreur de serveur</div>`;
-      }
-    }
-  </script>
+  <script src="./app.js"></script>
 </body>
 
 </html>
