@@ -14,6 +14,7 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+  scroll-behavior: smooth;
 }
 
 body {
@@ -30,79 +31,78 @@ body {
   border: 1px solid #ccc;
   border: 2px solid var(--secondary-color);
   border-radius: 10px;
-display: grid;
-row-gap: 10px;
-overflow: hidden;
+display: flex;
+flex-direction: column;
+  row-gap: 10px;
+  overflow: hidden;
 }
 
 .heading {
-display: flex;
-justify-content: center;
-align-items: center;
-color: var(--white);
-background-color: var(--primary-color);
-  height: 50px;
+  display: flex;
+  justify-content: center;
+  padding-top: 25px;
+  color: var(--white);
+  background-color: var(--primary-color);
+  height: 100px;
 }
 
 .content {
-
-padding: 20px;
-overflow-y: scroll;
+flex-grow: 1;
+  padding: 0 20px;
+  overflow-y: scroll;
 }
 
 .write-message {
-
-height: 50px;
-align-self: flex-end;
+  height: 50px;
   display: flex;
   justify-content: center;
-  gap: 20px;
-  /* background: blue; */
-  width: 100%;
   padding-bottom: 20px;
-  
 }
 
 .write-aria {
   background-color: var(--white);
   padding: 18px 15px;
   display: flex;
-  justify-content: space-between;
   align-items: center;
   border-radius: 999px;
 }
+
 .write-aria img {
   width: 20px;
   height: 20px;
   margin-right: 10px;
   color: var(--primary-color-light);
 }
+
 ::placeholder {
   color: var(--primary-color-light);
 }
+
 .btn-send {
-  /* cursor: pointer;
-  border-radius: 50%;
+  cursor: pointer;
   border: 0;
   width: 30px;
   height: 30px;
-display: flex;
-justify-content: center;
-align-items: center;
-
-color: var(--white);
-background-color: var(--primary-color); */
-border: 0;
-border-radius: 50%;
-
+  color: var(--white);
+  background-color: var(--primary-color);
+  border: 0;
+  border-radius: 50%;
 }
-.fa-paper-plane{
+
+.btn-send img {
+  width: 10px;
+  height: 10px;
+  transform: translateX(5px);
+}
+
+.fa-paper-plane {
   padding: 8px;
   color: var(--white);
   background-color: var(--primary-color);
   border-radius: 50%;
-cursor: pointer;
+  cursor: pointer;
 }
+
 input {
   border: 0;
   outline: 0;
@@ -116,13 +116,15 @@ input {
 
 .message {
   margin: 10px 0;
-
 }
-.user, .bot {
-  padding: 10px;
+
+.user,
+.bot {
+  padding: 10px 15px;
   border-radius: 20px;
   width: 75%;
 }
+
 .user {
   /* font-weight: bold; */
   background-color: var(--secondary-color);
@@ -142,6 +144,7 @@ input {
   display: flex;
   justify-content: space-between;
 }
+
 #messages p {
   opacity: 0;
 }
@@ -150,23 +153,23 @@ input {
   display: flex;
   row-gap: 5px;
   align-items: center;
-flex-direction: column;
-  padding: 10px 0;
+  flex-direction: column;
   font-weight: bold;
+  transform: translateY(-25px);
+  background-color: white;
+  border-top-left-radius: 25px;
+  border-top-right-radius: 25px;
+  padding-top: 20px;
 }
 
 .user-profile img {
   border-radius: 50%;
   width: 50px;
   height: 50px;
-  margin-right: 10px;
   object-fit: cover;
 }
 
 .fixed-head {
   position: sticky;
   top: 0;
-} 
-
-
-
+}
