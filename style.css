@@ -9,7 +9,6 @@
   --ff: "Lexend", sans-serif;
 }
 
-
 * {
   margin: 0;
   padding: 0;
@@ -31,8 +30,8 @@ body {
   border: 1px solid #ccc;
   border: 2px solid var(--secondary-color);
   border-radius: 10px;
-display: flex;
-flex-direction: column;
+  display: flex;
+  flex-direction: column;
   row-gap: 10px;
   overflow: hidden;
 }
@@ -47,7 +46,7 @@ flex-direction: column;
 }
 
 .content {
-flex-grow: 1;
+  flex-grow: 1;
   padding: 0 20px;
   overflow-y: scroll;
 }
@@ -172,4 +171,9 @@ input {
 .fixed-head {
   position: sticky;
   top: 0;
+}
+
+.mes {
+  display: flex;
+  flex-direction: row-reverse;
 }

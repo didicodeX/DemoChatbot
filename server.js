@@ -31,23 +31,6 @@ const getResponse = (intents, userInput) => {
     return "Erreur : Les intentions n'ont pas pu être chargées.";
   }
 
-  // Expressions régulières pour détecter la présentation
-  const namePatterns = [
-    /je m'appelle\s+([a-zA-Z]+)/i,
-    /je suis\s+([a-zA-Z]+)/i,
-    /je me nomme\s+([a-zA-Z]+)/i,
-    /mon nom est\s+([a-zA-Z]+)/i,
-  ];
-
-  // Vérification des patterns de nom
-  for (let i = 0; i < namePatterns.length; i++) {
-    const match = userInput.match(namePatterns[i]);
-    if (match) {
-      const name = match[i];
-      return `Nice to meet you, ${name}!`;
-    }
-  }
-
   for (const intent of intents.intents) {
     for (const pattern of intent.patterns) {
       const regex = new RegExp(pattern, "i"); // 'i' pour insensible à la casse
@@ -59,17 +42,6 @@ const getResponse = (intents, userInput) => {
     }
   }
 
-  for (const intent of intents.intents) {
-    for (const pattern of intent.patterns) {
-      const regex = new RegExp(pattern, "i"); // 'i' pour insensible à la casse
-      if (regex.test(userInput)) {
-        const response =
-          intent.responses[Math.floor(Math.random() * intent.responses.length)];
-        // Ajouter ici la logique pour afficher la réponse
-        return response;
-      }
-    }
-  }
   return "Je suis désolé, je ne comprends pas votre question.";
 };
 

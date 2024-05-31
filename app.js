@@ -16,7 +16,7 @@ async function sendMessage() {
   document.getElementById("userInput").value = "";
 
   const messageContainer = document.getElementById("messages");
-  messageContainer.innerHTML += `<div">
+  messageContainer.innerHTML += `<div>
     <div class="message user ">${userInput}</div>
   </div>`;
 
@@ -28,8 +28,7 @@ async function sendMessage() {
     });
 
     const data = await response.json();
-    messageContainer.innerHTML += `<div>
-    <p>Hiden</p>
+    messageContainer.innerHTML += `<div class="mes">
       <div class="message bot">${data.response}</div>
     </div>`;
   } catch (error) {
