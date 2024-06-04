@@ -27,21 +27,15 @@ const loadIntents = () => {
 
 // Fonction pour obtenir une réponse basée sur les intents
 const getResponse = (intents, userInput) => {
-  if (!intents) {
-    return "Erreur : Les intentions n'ont pas pu être chargées.";
-  }
-
   for (const intent of intents.intents) {
     for (const pattern of intent.patterns) {
-      const regex = new RegExp(pattern, "i"); // 'i' pour insensible à la casse
+      const regex = new RegExp(pattern, "i"); 
       if (regex.test(userInput)) {
-        const response =
-          intent.responses[Math.floor(Math.random() * intent.responses.length)];
+        const response = intent.responses[Math.floor(Math.random() * intent.responses.length)];
         return response;
       }
     }
   }
-
   return "Je suis désolé, je ne comprends pas votre question.";
 };
 
@@ -50,8 +44,6 @@ app.post("/chat", (req, res) => {
   const userInput = req.body.message;
   const intents = loadIntents();
   const response = getResponse(intents, userInput);
-  console.log("User Input:", userInput);
-  console.log("Response:", response);
   res.json({ response });
 });
 

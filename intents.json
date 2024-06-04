@@ -1,38 +1,32 @@
 {
   "intents": [
     {
-      "tag": "greeting",
       "patterns": ["yo","Bonjour", "Salut", "Hey", "Bonjour, comment ça va?"],
       "responses": ["Bonjour! Comment puis-je vous aider aujourd'hui?", "Salut! Que puis-je faire pour vous?", "Hey! Comment puis-je vous aider?"]
     },
     {
-      "tag": "hours",
       "patterns": ["Quels sont vos horaires?", "À quelle heure ouvrez-vous?", "À quelle heure fermez-vous?"],
       "responses": ["Nous sommes ouverts de 7h à 23h tous les jours.", "Nos horaires sont de 7h à 23h tous les jours."]
     },
     {
-      "tag": "menu",
       "patterns": ["Que proposez-vous au menu?", "Quels sont vos plats?", "Montrez-moi le menu"],
       "responses": ["Vous pouvez consulter notre menu complet sur notre site web. Nous avons une variété de burgers, de frites, de boissons et de desserts."]
     },
     {
-      "tag": "order",
       "patterns": ["Comment puis-je passer une commande?", "Puis-je commander en ligne?", "Comment commander?"],
       "responses": ["Vous pouvez passer une commande via notre application mobile ou sur notre site web. Vous pouvez également venir en magasin."]
     },
     {
-      "tag": "delivery",
       "patterns": ["Faites-vous des livraisons?", "Livrez-vous?", "Puis-je me faire livrer?"],
       "responses": ["Oui, nous faisons des livraisons via UberEats et Deliveroo. Vous pouvez passer commande via ces plateformes."]
     },
     {
-      "tag": "goodbye",
       "patterns": ["Merci", "Au revoir", "À bientôt", "bye"],
       "responses": ["Merci à vous! Passez une excellente journée!", "Au revoir! N'hésitez pas à revenir si vous avez d'autres questions.", "À bientôt!"]
     },
     {
       "patterns": ["Connais tu David ?"],
-      "responses": ["C'est un enseignant."]
+      "responses": ["Oui.C'est un enseignant du CCNB."]
     }
   ]
 }
