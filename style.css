@@ -23,7 +23,7 @@ body {
   justify-content: center;
 }
 
-#chat {
+.chat {
   width: 300px;
   height: 500px;
   margin: 20px auto;
@@ -36,6 +36,11 @@ body {
   overflow: hidden;
 }
 
+.chat__header {
+  position: sticky;
+  top: 0;
+}
+
 .heading {
   display: flex;
   justify-content: center;
@@ -45,20 +50,23 @@ body {
   height: 100px;
 }
 
-.content {
+.chat__main {
   flex-grow: 1;
   padding: 0 20px;
   overflow-y: scroll;
+  display: flex;
+  flex-direction: column;
+  row-gap: 10px;
 }
 
-.write-message {
+.chat__footer {
   height: 50px;
   display: flex;
   justify-content: center;
   padding-bottom: 20px;
 }
 
-.write-aria {
+.chat__input {
   background-color: var(--white);
   padding: 18px 15px;
   display: flex;
@@ -66,7 +74,7 @@ body {
   border-radius: 999px;
 }
 
-.write-aria img {
+.chat__input img {
   width: 20px;
   height: 20px;
   margin-right: 10px;
@@ -94,14 +102,6 @@ body {
   transform: translateX(5px);
 }
 
-.fa-paper-plane {
-  padding: 8px;
-  color: var(--white);
-  background-color: var(--primary-color);
-  border-radius: 50%;
-  cursor: pointer;
-}
-
 input {
   border: 0;
   outline: 0;
@@ -109,43 +109,26 @@ input {
   color: var(--secondary-color);
 }
 
-.material-symbols-outlined {
-  font-size: 18px;
-}
-
-.message {
-  margin: 10px 0;
-}
 
 .user,
 .bot {
-  padding: 10px 15px;
-  border-radius: 20px;
-  width: 75%;
+  padding: 8px;
+  border-radius: 12px;
+  width: 90%;
 }
 
 .user {
-  /* font-weight: bold; */
   background-color: var(--secondary-color);
   color: var(--white);
-  border-top-left-radius: 0;
+  border-top-right-radius: 0;
+  align-self: flex-end;
 }
 
 .bot {
-  /* font-weight: bold; */
   background-color: var(--primary-color);
   color: var(--white);
-  border-top-right-radius: 0;
-
-}
-
-#messages div {
-  display: flex;
-  justify-content: space-between;
-}
-
-#messages p {
-  opacity: 0;
+  border-top-left-radius: 0;
+  align-self: flex-start;
 }
 
 .user-profile {
@@ -168,12 +151,3 @@ input {
   object-fit: cover;
 }
 
-.fixed-head {
-  position: sticky;
-  top: 0;
-}
-
-.mes {
-  display: flex;
-  flex-direction: row-reverse;
-}
