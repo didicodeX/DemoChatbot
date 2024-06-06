@@ -5,37 +5,131 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Chatbot Dylane</title>
+  <link rel="stylesheet"
+    href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
   <link rel="stylesheet" href="style.css">
 </head>
 
 <body>
+  <div class="layer"></div>
+
+  <!-- *********************** Navbar *********************** -->
+  <header>
+    <nav>
+      <figure class="logo">
+        <img src="./img/figma-logo.svg" alt="">
+      </figure>
+      <ul>
+        <li><a href="#">Accueil</a></li>
+        <li><a href="#">Contact</a></li>
+        <li><a href="#">Blog</a></li>
+        <li><button class="btn-connexion">Connexion</button></li>
+      </ul>
+    </nav>
+  </header>
+
+  <!-- *********************** Main *********************** -->
+  <main id="main">
+    <div class="main-content">
+      <figure class="main-logo">
+        <img src="./img/figma-logo.svg" alt="">
+      </figure>
+      <h1>apprendre figma</h1>
+      <p>
+        Lorem ipsum dolor sit, amet consectetur adipisicing elit. Atque molestias nulla et nobis repellendus asperiores
+        quas saepe quod vero suscipit! Lor
+      </p>
+      <hr>
+    </div>
+
+    <!-- *********************** Connexion *********************** -->
+    <form id="connexion">
+      <div class="connexion-content">
+        <h1>connexion</h1>
+        <div class="user-infos">
+          <h2>email</h2>
+          <input type="email" placeholder="entrez votre email">
+          <h2>mot de passe</h2>
+          <input type="password" placeholder="entrez votre mot de passe">
+          <input type="submit" class="btn-connexion" value="Connexion">
+        </div>
+        <p><a href="#">Mot de passe oublie ?</a></p>
+        <p class="sing-up">Pas encore de compte ? <a href="#">s'inscrire</a></p>
+      </div>
+    </form>
+  </main>
+
+  <!-- *********************** Gradient *********************** -->
+  <div id="gradient">
+    <a class="arrow" href="#courses">
+      <span class="material-symbols-outlined go">keyboard_arrow_down</span>
+    </a>
+  </div>
+
+  <!-- *********************** Courses *********************** -->
+  <section id="courses">
+    <div class="course active">
+      <h2>figma : les bases</h2>
+      <hr>
+      <p>
+        Lorem ipsum dolor sit amet consectetur, adipisicing elit. Voluptates eos id natus quis cupiditate alias
+        similique praesentium suscipit, animi pariatur earum blanditiis tempora ipsum eius illo molestias consectetur
+        possimus eligendi.
+      </p>
+    </div>
+    <div class="course">
+      <h2>figma : avance</h2>
+      <hr>
+      <p>
+        Lorem ipsum dolor sit amet consectetur, adipisicing elit. Voluptates eos id natus quis cupiditate alias
+        similique praesentium suscipit, animi pariatur earum blanditiis tempora ipsum eius illo molestias consectetur
+        possimus eligendi.
+      </p>
+    </div>
+    <div class="course">
+      <h2>figma : expert</h2>
+      <hr>
+      <p>
+        Lorem ipsum dolor sit amet consectetur, adipisicing elit. Voluptates eos id natus quis cupiditate alias
+        similique praesentium suscipit, animi pariatur earum blanditiis tempora ipsum eius illo molestias consectetur
+        possimus eligendi.
+      </p>
+    </div>
+    <div class="course">
+      <h2>figma : master</h2>
+      <hr>
+      <p>
+        Lorem ipsum dolor sit amet consectetur, adipisicing elit. Voluptates eos id natus quis cupiditate alias
+        similique praesentium suscipit, animi pariatur earum blanditiis tempora ipsum eius illo molestias consectetur
+        possimus eligendi.
+      </p>
+    </div>
+  </section>
+
+  <!-- CHatBot -->
   <div class="chat">
 
     <div class="chat__header">
-      <div class="heading">
-        <h2>Messages</h2>
-      </div>
       <div class="user-profile">
-        <img src="./images/atomic-gril.jpg" alt="Robert Fox">
-        <p>Dylane</p>
+        <img src="./img/atomic-gril.jpg" alt="Lademoiselle-bot">
+        <p>Lademoiselle-bot</p>
       </div>
+      <span class="material-symbols-outlined chat__close">close</span>
     </div>
 
     <div class="chat__main">
-      <div class="bot">Bonjour! Comment puis-je vous aider aujourd'hui?</div> 
+      <div class="bot">Hallo 👋</div>
     </div>
 
-    <div class="chat__footer">
-      <div class="chat__input">
-        <img src="./images/smile.png" alt="">
-        <input type="text" id="userInput" placeholder="Ecrire...">
-        <button class="btn-send">
-          <img src="./images/Vector.png" alt="">
-        </button>
-      </div>
+    <div class="chat__input">
+      <input type="text" class="user-input" placeholder="Write your message">
+      <span class="material-symbols-outlined btn-send">send</span>
     </div>
 
   </div>
+  <button id="chat-button" class="chat__button">
+    <span class="material-symbols-outlined questions">help</span>
+  </button>
 
   <script src="./app.js"></script>
 </body>

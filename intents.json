@@ -1,32 +1,49 @@
 {
   "intents": [
     {
-      "patterns": ["yo","Bonjour", "Salut", "Hey", "Bonjour, comment ça va?"],
-      "responses": ["Bonjour! Comment puis-je vous aider aujourd'hui?", "Salut! Que puis-je faire pour vous?", "Hey! Comment puis-je vous aider?"]
+      "tag": "greeting",
+      "patterns": ["Bonjour", "Salut", "Bonsoir", "Hello"],
+      "responses": ["Bonjour ! Comment puis-je vous aider avec nos formations Figma ?", "Salut ! Que puis-je faire pour vous concernant nos cours Figma ?"]
     },
     {
-      "patterns": ["Quels sont vos horaires?", "À quelle heure ouvrez-vous?", "À quelle heure fermez-vous?"],
-      "responses": ["Nous sommes ouverts de 7h à 23h tous les jours.", "Nos horaires sont de 7h à 23h tous les jours."]
+      "tag": "cours_disponibles",
+      "patterns": ["Quels cours proposez-vous ?", "Quelles sont les formations disponibles ?", "Quels sont les différents niveaux de cours ?", "Quels types de cours offrez-vous ?"],
+      "responses": ["Nous proposons quatre cours : Les Bases, Avancé, Expert et Master."]
     },
     {
-      "patterns": ["Que proposez-vous au menu?", "Quels sont vos plats?", "Montrez-moi le menu"],
-      "responses": ["Vous pouvez consulter notre menu complet sur notre site web. Nous avons une variété de burgers, de frites, de boissons et de desserts."]
+      "tag": "cours_bases",
+      "patterns": ["Qu'enseigne le cours Les Bases ?", "Que couvre le cours de base ?", "Quels sont les contenus du cours Les Bases ?"],
+      "responses": ["Le cours Les Bases couvre les fondamentaux de Figma, y compris l'interface utilisateur, les outils de base, et les premières étapes pour créer des designs simples."]
     },
     {
-      "patterns": ["Comment puis-je passer une commande?", "Puis-je commander en ligne?", "Comment commander?"],
-      "responses": ["Vous pouvez passer une commande via notre application mobile ou sur notre site web. Vous pouvez également venir en magasin."]
+      "tag": "cours_avance",
+      "patterns": ["Qu'enseigne le cours Avancé ?", "Que couvre le cours avancé ?", "Quels sont les contenus du cours Avancé ?"],
+      "responses": ["Le cours Avancé aborde des techniques plus complexes comme les composants, les systèmes de design, et l'utilisation de plugins pour améliorer votre flux de travail."]
     },
     {
-      "patterns": ["Faites-vous des livraisons?", "Livrez-vous?", "Puis-je me faire livrer?"],
-      "responses": ["Oui, nous faisons des livraisons via UberEats et Deliveroo. Vous pouvez passer commande via ces plateformes."]
+      "tag": "cours_expert",
+      "patterns": ["Qu'enseigne le cours Expert ?", "Que couvre le cours expert ?", "Quels sont les contenus du cours Expert ?"],
+      "responses": ["Le cours Expert se concentre sur des projets complets, des collaborations en temps réel, et des astuces pour optimiser vos designs pour différents dispositifs."]
     },
     {
-      "patterns": ["Merci", "Au revoir", "À bientôt", "bye"],
-      "responses": ["Merci à vous! Passez une excellente journée!", "Au revoir! N'hésitez pas à revenir si vous avez d'autres questions.", "À bientôt!"]
+      "tag": "cours_master",
+      "patterns": ["Qu'enseigne le cours Master ?", "Que couvre le cours master ?", "Quels sont les contenus du cours Master ?"],
+      "responses": ["Le cours Master est destiné aux designers expérimentés souhaitant maîtriser Figma. Il inclut des études de cas avancées, l'automatisation de tâches, et des techniques de prototypage interactif."]
     },
     {
-      "patterns": ["Connais tu David ?"],
-      "responses": ["Oui.C'est un enseignant du CCNB."]
+      "tag": "prix",
+      "patterns": ["Quel est le prix des cours ?", "Combien coûtent les formations ?", "Quels sont les tarifs des cours ?"],
+      "responses": ["Les prix varient selon les cours : Les Bases - 100$, Avancé - 200$, Expert - 300$, Master - 400$."]
+    },
+    {
+      "tag": "inscription",
+      "patterns": ["Comment s'inscrire ?", "Comment puis-je m'inscrire à un cours ?", "Quelle est la procédure pour s'inscrire ?"],
+      "responses": ["Pour vous inscrire, rendez-vous sur notre site web, sélectionnez le cours qui vous intéresse, et suivez les instructions pour compléter votre inscription."]
+    },
+    {
+      "tag": "contact",
+      "patterns": ["Comment vous contacter ?", "Comment puis-je vous joindre ?", "Quel est votre contact ?"],
+      "responses": ["Vous pouvez nous contacter par email à Lademoiselle-bot@formationfigma.com ou par téléphone au 506 555 1884."]
     }
   ]
 }
