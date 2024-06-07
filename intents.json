@@ -7,12 +7,12 @@
     },
     {
       "tag": "cours_disponibles",
-      "patterns": ["Quels cours proposez-vous ?", "Quelles sont les formations disponibles ?", "Quels sont les différents niveaux de cours ?", "Quels types de cours offrez-vous ?"],
+      "patterns": ["Quels cours avez vous ?", "Quelles sont les formations disponibles ?", "Quels sont les différents niveaux de cours ?", "Quels types de cours offrez-vous ?"],
       "responses": ["Nous proposons quatre cours : Les Bases, Avancé, Expert et Master."]
     },
     {
       "tag": "cours_bases",
-      "patterns": ["Qu'enseigne le cours Les Bases ?", "Que couvre le cours de base ?", "Quels sont les contenus du cours Les Bases ?"],
+      "patterns": ["Qu'enseigne le cours Les Bases ?", "Que couvre le cours de base?", "Quels sont les contenus du cours Les Bases ?"],
       "responses": ["Le cours Les Bases couvre les fondamentaux de Figma, y compris l'interface utilisateur, les outils de base, et les premières étapes pour créer des designs simples."]
     },
     {
@@ -32,18 +32,18 @@
     },
     {
       "tag": "prix",
-      "patterns": ["Quel est le prix des cours ?", "Combien coûtent les formations ?", "Quels sont les tarifs des cours ?"],
+      "patterns": ["Quel est le prix?", "Combien?", "Quels sont les tarifs des cours ?"],
       "responses": ["Les prix varient selon les cours : Les Bases - 100$, Avancé - 200$, Expert - 300$, Master - 400$."]
     },
     {
       "tag": "inscription",
-      "patterns": ["Comment s'inscrire ?", "Comment puis-je m'inscrire à un cours ?", "Quelle est la procédure pour s'inscrire ?"],
+      "patterns": ["Comment s'inscrire?", "Comment puis-je m'inscrire à un cours ?", "Quelle est la procédure pour s'inscrire ?"],
       "responses": ["Pour vous inscrire, rendez-vous sur notre site web, sélectionnez le cours qui vous intéresse, et suivez les instructions pour compléter votre inscription."]
     },
     {
       "tag": "contact",
-      "patterns": ["Comment vous contacter ?", "Comment puis-je vous joindre ?", "Quel est votre contact ?"],
+      "patterns": ["Comment vous contacter?", "Comment puis-je vous joindre ?", "Quel est votre contact ?"],
       "responses": ["Vous pouvez nous contacter par email à Lademoiselle-bot@formationfigma.com ou par téléphone au 506 555 1884."]
-    }
+     }
   ]
 }
