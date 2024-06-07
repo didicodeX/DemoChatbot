@@ -36,7 +36,7 @@ const getResponse = (intents, userInput) => {
       }
     }
   }
-  return "Je suis désolé, je ne comprends pas votre question.";
+  return "consulter notre FAQ.";
 };
 
 // Route pour gérer les requêtes de chat

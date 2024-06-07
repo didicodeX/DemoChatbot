@@ -375,10 +375,6 @@ input[type=submit]:hover {
   z-index: 1;
 }
 
-.questions {
-  font-size: 38px;
-}
-
 .chat {
   width: 370px;
   height: 550px;
@@ -521,9 +517,6 @@ input[type=submit]:hover {
   left: 34px;
   animation-delay: 0.6s;
 }
-
-
-
 
 @keyframes loadingDots {
   0% {
