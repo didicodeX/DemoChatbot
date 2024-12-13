@@ -2,7 +2,7 @@
   "intents": [
     {
       "tag": "greeting",
-      "patterns": ["Bonjour", "Salut", "Bonsoir", "Hello"],
+      "patterns": ["Bonjour", "Salut", "Bonsoir", "Hello", "yo"],
       "responses": ["Bonjour ! Comment puis-je vous aider avec nos formations Figma ?", "Salut ! Que puis-je faire pour vous concernant nos cours Figma ?"]
     },
     {
