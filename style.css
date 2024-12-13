@@ -128,7 +128,7 @@ ul {
 
 /************************  Main **************************/
 #main {
-  background: url('./img/supercar.png') center/cover;
+  background: url('./img/supercar-1\ 1.svg') center/cover;
   height: calc(90vh - 56px);
   display: flex;
   justify-content: center;
@@ -526,5 +526,19 @@ input[type=submit]:hover {
   100% {
     opacity: 1;
     transform: scale(1);
+  }
+}
+
+@media screen and (max-width: 800px) {
+  .chat {
+    width: 300px;
+    height: 500px;
+    bottom: 80px;
+    right: 20px;
+  }
+
+  .chat__button {
+    bottom: 10px;
+    right: 10px;
   }
 }

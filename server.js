@@ -36,7 +36,7 @@ const getResponse = (intents, userInput) => {
       }
     }
   }
-  return "consulter notre FAQ.";
+  return "Desolé, je ne comprends pas votre question. Pouvez-vous reformuler? Consultez notre FAQ pour plus d'informations.";
 };
 
 // Route pour gérer les requêtes de chat
