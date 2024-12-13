@@ -128,7 +128,7 @@ ul {
 
 /************************  Main **************************/
 #main {
-  background: url(./img/supercar-1\ 1.svg) center/cover;
+  background: url('./img/supercar.png') center/cover;
   height: calc(90vh - 56px);
   display: flex;
   justify-content: center;
